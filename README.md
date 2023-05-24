@@ -143,116 +143,118 @@ HTML文档 `<head>` 标签内容清单。
 <meta name="subject" content="your document's subject" />
 
 <!-- 基于网站内容给出一般的年龄分级 -->
-<meta name="rating" content="General">
+<meta name="rating" content="General" />
 
 <!-- 允许控制 referrer 信息如何传递 -->
-<meta name="referrer" content="no-referrer">
+<meta name="referrer" content="no-referrer" />
 
 <!-- 禁用自动检测和格式化可能的电话号码 -->
-<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="telephone=no" />
 
 <!-- 通过设置为 "off" 完全退出 DNS 预取 -->
-<meta http-equiv="x-dns-prefetch-control" content="off">
+<meta http-equiv="x-dns-prefetch-control" content="off" />
 
 <!-- 在客户端存储 cookie，web 浏览器的客户端识别 -->
-<meta http-equiv="set-cookie" content="name=value; expires=date; path=url">
+<meta http-equiv="set-cookie" content="name=value; expires=date; path=url" />
 
 <!-- 指定要显示在一个特定框架中的页面 -->
-<meta http-equiv="Window-Target" content="_value">
+<meta http-equiv="Window-Target" content="_value" />
 
 <!-- 地理标签 -->
-<meta name="ICBM" content="latitude, longitude">
-<meta name="geo.position" content="latitude;longitude">
-<meta name="geo.region" content="country[-state]"><!-- 国家代码 (ISO 3166-1): 强制性, 州代码 (ISO 3166-2): 可选; 如 content="US" / content="US-NY" -->
-<meta name="geo.placename" content="city/town"><!-- 如 content="New York City" -->
+<meta name="ICBM" content="latitude, longitude" />
+<meta name="geo.position" content="latitude; longitude" />
+<meta name="geo.region" content="country[-state]" /><!-- 国家代码 (ISO 3166-1): 强制性；州代码 (ISO 3166-2): 可选；如 content="US" / content="US-NY" -->
+<meta name="geo.placename" content="city/town" /><!-- 如 content="New York City" -->
+
+<!-- 网络货币化 https://webmonetization.org/docs/getting-started -->
+<meta name="monetization" content="$paymentpointer.example" />
 ```
 
-- 📖 [Google 可以识别的 Meta 标签](https://support.google.com/webmasters/answer/79812?hl=zh-Hans)
-- 📖 [WHATWG Wiki: Meta 拓展](https://wiki.whatwg.org/wiki/MetaExtensions)
-- 📖 [ICBM - 维基百科](https://en.wikipedia.org/wiki/ICBM_address#Modern_use)
-- 📖 [地理标记 - 维基百科](https://en.wikipedia.org/wiki/Geotagging#HTML_pages)
+- [Google 可以识别的 Meta 标签](https://support.google.com/webmasters/answer/79812?hl=zh-Hans)
+- [WHATWG Wiki: Meta 拓展](https://wiki.whatwg.org/wiki/MetaExtensions)
+- [ICBM - 维基百科](https://en.wikipedia.org/wiki/ICBM_address#Modern_use)
+- [地理标记 - 维基百科](https://en.wikipedia.org/wiki/Geotagging#HTML_pages)
 
-**[⬆ 返回顶部](#目录)**
+**[返回顶部](#目录)**
 
 ## 链接
 
 ``` html
-<!-- 指向外部 CSS 样式表 -->
-<link rel="stylesheet" href="https://example.com/styles.css">
+<!-- 链接外部 CSS 样式文件 -->
+<link rel="stylesheet" href="https://example.com/styles.css" />
 
 <!-- 有助于防止出现内容重复的问题 -->
-<link rel="canonical" href="https://example.com/2010/06/9-things-to-do-before-entering-social-media.html">
+<link rel="canonical" href="https://example.com/article/?page=2" />
 
-<!-- 之前用于包含 icon 的链接，但目前已被废弃 -->
-<link rel="shortlink" href="https://example.com/?p=42">
+<!-- 指向当前文档的 AMP HTML 版本的链接 -->
+<link rel="amphtml" href="https://example.com/path/to/amp-version.html" />
 
-<!-- 链接到当前文档的一个 AMP HTML 版本 -->
-<link rel="amphtml" href="https://example.com/path/to/amp-version.html">
+<!-- 指向一个指定 Web 应用程序安装凭据的 JSON 文件 -->
+<link rel="manifest" href="manifest.json" />
 
-<!-- 链接到一个指定 Web 应用程序“安装”凭据的 JSON 文件 -->
-<link rel="manifest" href="manifest.json">
+<!-- 有关文档作者的信息 -->
+<link rel="author" href="humans.txt" />
 
-<!-- 链接到关于页面所有者的信息 -->
-<link rel="author" href="humans.txt">
+<!-- 链接到该文档的版权信息 -->
+<link rel="license" href="copyright.html" />
 
-<!-- 指向一个适用于链接内容的版权申明 -->
-<link rel="license" href="copyright.html">
+<!-- 链接到该文档的替代版本（比如打印页、翻译或镜像） -->
+<link rel="alternate" href="https://es.example.com/" hreflang="es" />
 
-<!-- 给出可能的你的另一种语言的文档位置参考 -->
-<link rel="alternate" href="https://es.example.com/" hreflang="es">
-
-<!-- 提供了关于作者或其他人的信息 -->
-<link rel="me" href="https://google.com/profiles/thenextweb" type="text/html">
-<link rel="me" href="mailto:name@example.com">
-<link rel="me" href="sms:+15035550125">
+<!-- 提供有关作者或其他人的信息 -->
+<link rel="me" href="https://google.com/profiles/thenextweb" type="text/html" />
+<link rel="me" href="mailto:name@example.com" />
+<link rel="me" href="sms:+15035550125" />
 
 <!-- 链接到一个描述历史记录、文档或其他具有历史意义的材料的集合的文档 -->
-<link rel="archives" href="https://example.com/archives/">
+<link rel="archives" href="https://example.com/archives/" />
 
-<!-- 链接到层次结构中的顶级资源 -->
-<link rel="index" href="https://example.com/">
+<!-- 链接到分层结构中的顶级资源 -->
+<link rel="index" href="https://example.com/" />
 
-<!-- 提供了自我引用 - 当文档有多个可能的引用时非常有用 -->
-<link rel="self" type="application/atom+xml" href="https://example.com/atomFeed.php?page=3">
+<!-- 提供自我引用 - 当文档有多个可能的引用时很有用 -->
+<link rel="self" type="application/atom+xml" href="https://example.com/atomFeed.php?page=3" />
 
-<!-- 分别是在一系列文件中的第一个、下一个、上一个和最后一个 -->
-<link rel="first" href="https://example.com/atomFeed.php">
-<link rel="next" href="https://example.com/atomFeed.php?page=4">
-<link rel="prev" href="https://example.com/atomFeed.php?page=2">
-<link rel="last" href="https://example.com/atomFeed.php?page=147">
+<!-- 分别为一系列文档中的第一个、最后一个、上一个和下一个文档 -->
+<link rel="first" href="https://example.com/atomFeed.php" />
+<link rel="last" href="https://example.com/atomFeed.php?page=40" />
+<link rel="prev" href="https://example.com/atomFeed.php?page=1" />
+<link rel="next" href="https://example.com/atomFeed.php?page=3" />
 
-<!-- 当使用第三方服务来维护博客时使用 -->
-<link rel="EditURI" href="https://example.com/xmlrpc.php?rsd" type="application/rsd+xml" title="RSD">
+<!-- 当使用第三方服务维护博客时使用 -->
+<link rel="EditURI" href="https://example.com/xmlrpc.php?rsd" type="application/rsd+xml" title="RSD" />
 
-<!-- 当另一个 WordPress 博客链接到你的 WordPress 博客或文章时形成一个自动化的评论 -->
-<link rel="pingback" href="https://example.com/xmlrpc.php">
+<!-- 当另一个 WordPress 博客链接到您的 WordPress 博客或帖子时形成自动评论 -->
+<link rel="pingback" href="https://example.com/xmlrpc.php" />
 
-<!-- 当你在自己的页面上链接到一个 url 时通知它 -->
-<link rel="webmention" href="https://example.com/webmention">
+<!-- 当你在页面中链接到一个 url 时通知它 -->
+<link rel="webmention" href="https://example.com/webmention" />
 
 <!-- 启用通过 Micropub 客户端发布你的域名 -->
-<link rel="micropub" href="https://example.com/micropub">
+<link rel="micropub" href="https://example.com/micropub" />
 
 <!-- 加载一个外部的 HTML 文件到当前页面 -->
-<link rel="import" href="/path/to/component.html">
+<link rel="import" href="/path/to/component.html" />
 
 <!-- 打开搜索 -->
-<link rel="search" href="/open-search.xml" type="application/opensearchdescription+xml" title="Search Title">
+<link rel="search" href="/open-search.xml" type="application/opensearchdescription+xml" title="Search Title" />
 
-<!-- Feeds -->
-<link rel="alternate" href="https://feeds.feedburner.com/example" type="application/rss+xml" title="RSS">
-<link rel="alternate" href="https://example.com/feed.atom" type="application/atom+xml" title="Atom 0.3">
+<!-- 提要 -->
+<link rel="alternate" href="https://feeds.feedburner.com/example" type="application/rss+xml" title="RSS" />
+<link rel="alternate" href="https://example.com/feed.atom" type="application/atom+xml" title="Atom 0.3" />
 
-<!-- 预取，预载，预浏览 -->
-<link rel="dns-prefetch" href="//example.com/">
-<link rel="preconnect" href="https://www.example.com/">
-<link rel="prefetch" href="https://www.example.com/">
-<link rel="prerender" href="https://example.com/">
-<link rel="preload" href="image.png" as="image">
+<!-- 预取、预加载、预浏览 -->
 <!-- 更多信息：https://css-tricks.com/prefetching-preloading-prebrowsing/ -->
+<link rel="dns-prefetch" href="//example.com/" />
+<link rel="preconnect" href="https://www.example.com/" />
+<link rel="prefetch" href="https://www.example.com/" />
+<link rel="prerender" href="https://example.com/" />
+<link rel="preload" href="image.png" as="image" />
 ```
 
-**[⬆ 返回顶部](#目录)**
+- [Link Relations](https://www.iana.org/assignments/link-relations/link-relations.xhtml)
+
+**[返回顶部](#目录)**
 
 ## 网站图标
 
