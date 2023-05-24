@@ -272,7 +272,7 @@ HTML文档 `<head>` 标签内容清单。
 - 📖 [所有关于网站图标（和触摸图标）的信息](https://bitsofco.de/all-about-favicons-and-touch-icons/)
 - 📖 [网站图标对照表](https://github.com/audreyr/favicon-cheat-sheet)
 
-**[⬆ 返回顶部](#目录)**
+**[返回顶部](#目录)**
 
 ## 社交
 
@@ -354,7 +354,7 @@ HTML文档 `<head>` 标签内容清单。
 
 - 📖 [oEmbed 格式](https://oembed.com/)
 
-**[⬆ 返回顶部](#目录)**
+**[返回顶部](#目录)**
 
 ## 浏览器 / 平台
 
@@ -456,7 +456,7 @@ HTML文档 `<head>` 标签内容清单。
 <meta name="msapplication-task-separator" content="1">
 ```
 
-**[⬆ 返回顶部](#目录)**
+**[返回顶部](#目录)**
 
 ## 国内的浏览器
 
@@ -505,7 +505,7 @@ HTML文档 `<head>` 标签内容清单。
 
 - 📖 [UC 浏览器文档](https://www.uc.cn/download/UCBrowser_U3_API.doc)
 
-**[⬆ 返回顶部](#目录)**
+**[返回顶部](#目录)**
 
 ## 应用链接
 
@@ -526,7 +526,7 @@ HTML文档 `<head>` 标签内容清单。
 
 - 📖 [应用链接文档](https://applinks.org/documentation/)
 
-**[⬆ 返回顶部](#目录)**
+**[返回顶部](#目录)**
 
 ## 注意
 
@@ -540,14 +540,14 @@ HTML文档 `<head>` 标签内容清单。
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
 ```
 
-**[⬆ 返回顶部](#目录)**
+**[返回顶部](#目录)**
 
 ## 其他资源
 
 - 📖 [HTML5 样板文档：HTML 标签](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/html.md)
 - 📖 [HTML5 样板文档：扩展和定制](https://github.com/h5bp/html5-boilerplate/blob/master/dist/doc/extend.md)
 
-**[⬆ 返回顶部](#目录)**
+**[返回顶部](#目录)**
 
 ## 相关项目
 
@@ -556,66 +556,4 @@ HTML文档 `<head>` 标签内容清单。
 - [head-it](https://github.com/hemanth/head-it) - `HEAD` 片段的 CLI 接口
 - [vue-head](https://github.com/ktquez/vue-head) - 在 Vue.js 中操作 `HEAD` 标签的 meta 信息
 
-**[⬆ 返回顶部](#目录)**
-
-## 其他格式
-
-- 📄 [PDF](https://gitprint.com/joshbuchea/HEAD/blob/master/README.md)
-
-**[⬆ 返回顶部](#目录)**
-
-## 翻译
-
-- 🇺🇸 [英语/English](https://github.com/joshbuchea/HEAD)
-- 🇨🇳 [简体中文/Chinese (Simplified)](https://github.com/Amery2010/HEAD)
-- 🇧🇷 [巴西葡萄牙语/Brazilian Portuguese](https://github.com/Webschool-io/HEAD)
-- 🇮🇹 [意大利语/Italian](https://github.com/Fakkio/HEAD)
-- 🇯🇵 [日语/Japanese](https://coliss.com/articles/build-websites/operation/work/collection-of-html-head-elements.html)
-- 🇰🇷 [韩语/Korean](https://github.com/Lutece/HEAD)
-- 🇷🇺 [俄罗斯语/Russian/Русский](https://github.com/Konfuze/HEAD)
-- 🇹🇷 [土耳其语/Turkish/Türkçe](https://github.com/mkg0/HEAD)
-
-**[⬆ 返回顶部](#目录)**
-
-## 贡献
-
-**开启一个 issue 或一个 pull 请求来提出修改或补充。**
-
-### 指南
-
-** HEAD ** 仓库由两个分支组成：
-
-#### 1、`master`
-
-对该分支包含的 `README.md` 文件的修改会自动反映在 [gethead.info](https://gethead.info/) 网站上。 所有对照表内容的更改都应该针对此文件。
-
-请按照下列步骤 pull 请求：
-
-- 只修改一个标签，或一次一组相关的标签
-- 对属性使用双引号
-- 请不要在自我闭合的元素中使用斜线 —— 即便 HTML5 规范中说，他们是可选的
-- 考虑在文档中加入链接以支持你所提到的变化
-
-#### 2. `gh-pages`
-
-该分支负责 [gethead.info](https://gethead.info/) 网站。我们使用 [Jekyll](https://jekyllrb.com/) 通过 [GitHub Pages](https://pages.github.com/) 服务来部署 `README.md` Markdown 文件。所有网站相关的修改必须集中在这里。
-
-你可能需要通过 [Jekyll 文档](https://jekyllrb.com/docs/home/) 来了解 Jekyll 是如何在该分支上工作的。
-
-### 贡献者
-
-列出所有超级棒的 [贡献者们](https://github.com/joshbuchea/HEAD/graphs/contributors).
-
-## 作者
-
-**[Josh Buchea](https://joshbuchea.com/)**
-
-### 翻译者
-
-**[子丶言](https://xiangfa.org/)**
-
-## 协议
-
-![CC0](https://i.creativecommons.org/p/zero/1.0/88x31.png "CC0")
-
-**[⬆ 返回顶部](#目录)**
+**[返回顶部](#目录)**
