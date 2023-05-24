@@ -4,7 +4,7 @@
 [![CC0](https://img.shields.io/badge/license-CC0-green.svg?style=for-the-badge)](https://creativecommons.org/publicdomain/zero/1.0/)
 [![Follow @joshbuchea on Mastodon](https://img.shields.io/badge/Follow_@joshbuchea-purple?logo=mastodon&logoColor=white&style=for-the-badge)](https://hachyderm.io/@joshbuchea)
 
-HTML文档 <head> 标签内容清单。
+HTML文档 `<head>` 标签内容清单。
 
 ## 目录
 
@@ -53,7 +53,7 @@ HTML文档 <head> 标签内容清单。
 <title>页面标题</title>
 ```
 
-`meta charset` - 设置文档的字符编码，`utf-8`为标准编码
+`meta charset` - 设置文档的字符编码，`utf-8` 为标准编码
 
 `meta name="viewport"` - 与移动响应相关的视口设置
 
@@ -67,20 +67,22 @@ HTML文档 <head> 标签内容清单。
 
 有效的 `<head>` 元素包括 `meta`、`link`、`title`、`style`、`script`、`noscript` 和 `base`。
 
+这些元素为 web 技术（如浏览器、搜索引擎、机器人等）应该如何感知和呈现文档提供了信息。
+
 ``` html
-<!-- Meta 标签提供了文档如何被其他技术（如，机器、搜索引擎、浏览器等）理解和渲染的信息。 -->
-<meta charset="utf-8">
+<!-- 设置文档的字符编码，以便 UTF-8 空间内的所有字符（例如表情符号）正确渲染 -->
+<meta charset="utf-8" />
 
 <!-- 设置文档标题 -->
 <title>页面标题</title>
 
-<!-- 基本 URL 作用于文档中所包含的所有相对 URL -->
-<base href="https://example.com/page.html">
+<!-- 为文档中的所有相对 URL 设置基本 URL -->
+<base href="https://example.com/page.html" />
 
-<!-- 链接外部 CSS 文件 -->
-<link rel="stylesheet" href="styles.css">
+<!-- 链接外部 CSS 样式文件 -->
+<link rel="stylesheet" href="styles.css" />
 
-<!-- 用于文档内的 CSS -->
+<!-- 用于添加文档内联 CSS 样式 -->
 <style>
   /* ... */
 </style>
@@ -90,61 +92,55 @@ HTML文档 <head> 标签内容清单。
   // function(s) go here
 </script>
 <noscript>
-  <!--无 JS 时显示-->
+  <!-- 用来定义在脚本未被执行时的替代内容（文本） -->
 </noscript>
 ```
 
-**[⬆ 返回顶部](#目录)**
+**[返回顶部](#目录)**
 
 ## Meta 标签
 
 ``` html
-<!-- 设置文档的字符编码 -->
-<meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge"><!-- † -->
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!-- 
-  以上 3 个 meta 标签 *必须* 放在 head 的最前面；其他任何的 head 内容必须在这些标签的 *后面*
+<!-- 以下 2 个 meta 标签必须放在 <head> 的最前面；任何其他头元素都应该在这些标签后面 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  † 如果您的项目必须支持 Internet Explorer 11 之前的版本，请使用 content="ie-edge" 标签。
-  
- -->
+<!-- 允许控制资源的加载位置，应尽可能早地放置在 ＜head＞ 中，因为该标签只适用于在其后面声明的资源 -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
 
-<!-- 允许控制资源的过度加载 -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'">
-<!-- 尽早地放置在文档中 -->
-<!-- 仅应用于该标签下的资源 -->
+<!-- Web 应用程序的名称（仅当网站被用作应用程序时才使用）-->
+<meta name="application-name" content="Application Name" />
 
-<!-- Web 应用的名称（仅当网站被用作为一个应用时才使用）-->
-<meta name="application-name" content="应用名称">
+<!-- Chrome、Firefox OS 和 Opera 的主题颜色 -->
+<meta name="theme-color" content="#4285f4" />
 
-<!-- 针对页面的简短描述（限制 150 字符）-->
-<!-- 在*某些*情况下，该描述是被用作搜索结果展示片段的一部分 -->
-<meta name="description" content="一个页面描述">
+<!-- 针对页面的简短描述（限制在 150 个字符以内）-->
+<!-- 在某些情况下，此内容会被用作搜索引擎结果的一部分 -->
+<meta name="description" content="A description of the page" />
 
 <!-- 控制搜索引擎的抓取和索引行为 -->
-<meta name="robots" content="index,follow"><!-- 所有搜索引擎 -->
-<meta name="googlebot" content="index,follow"><!-- 仅对 Google 有效 -->
+<meta name="robots" content="index,follow" /><!-- 所有搜索引擎 -->
+<meta name="googlebot" content="index,follow" /><!-- 仅对 Google 有效 -->
 
-<!-- 告诉 Google 不显示网站链接的搜索框 -->
-<meta name="google" content="nositelinkssearchbox">
+<!-- 告诉 Google 不显示附加链接搜索框 -->
+<meta name="google" content="nositelinkssearchbox" />
 
-<!-- 告诉 Google 不提供此页面的翻译 -->
-<meta name="google" content="notranslate">
+<!-- 告诉 Google 不为此页面提供翻译 -->
+<meta name="google" content="notranslate" />
 
-<!-- 验证网址所有权 -->
-<meta name="google-site-verification" content="verification_token"><!-- Google Search Console -->
-<meta name="yandex-verification" content="verification_token"><!-- Yandex Webmasters -->
-<meta name="msvalidate.01" content="verification_token"><!-- Bing Webmaster Center -->
-<meta name="alexaVerifyID" content="verification_token"><!-- Alexa Console -->
-<meta name="p:domain_verify" content="code from pinterest"><!-- Pinterest Console -->
-<meta name="norton-safeweb-site-verification" content="norton code"><!-- Norton Safe Web -->
+<!-- 验证网站所有权 -->
+<meta name="google-site-verification" content="verification_token" /><!-- Google Search Console -->
+<meta name="yandex-verification" content="verification_token" /><!-- Yandex Webmasters -->
+<meta name="msvalidate.01" content="verification_token" /><!-- Bing Webmaster Center -->
+<meta name="alexaVerifyID" content="verification_token" /><!-- Alexa Console -->
+<meta name="p:domain_verify" content="code_from_pinterest" /><!-- Pinterest Console -->
+<meta name="norton-safeweb-site-verification" content="norton_code" /><!-- Norton Safe Web -->
 
-<!-- 确定用于构建页面的软件（如 - WordPress、Dreamweaver）-->
-<meta name="generator" content="program">
+<!-- 确定用于构建页面的软件（如 WordPress、Dreamweaver）-->
+<meta name="generator" content="program" />
 
-<!-- 关于你的网站主题的简短描述 -->
-<meta name="subject" content="你的网站主题">
+<!-- 文档主题的简短描述 -->
+<meta name="subject" content="your document's subject" />
 
 <!-- 基于网站内容给出一般的年龄分级 -->
 <meta name="rating" content="General">
